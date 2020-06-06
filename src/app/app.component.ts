@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ThemeProviderService } from './theme-provider/theme-provider.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'theme-provider';
+export class AppComponent implements OnInit {
+    title = 'theme-provider';
+
+    constructor(
+        private themeProviderService: ThemeProviderService,
+    ) {}
+
+    public ngOnInit() {
+    }
 }
